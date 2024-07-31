@@ -15,6 +15,7 @@ import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
+import androidx.navigation.compose.rememberNavController
 import com.example.myrecipeapp.ui.theme.MyRecipeAppTheme
 import eu.tutorials.myrecipeapp.RecipeScreen
 
@@ -25,7 +26,7 @@ class MainActivity : ComponentActivity() {
         setContent {
             MyRecipeAppTheme {
                 Surface(color = Color.White) {
-                    RecipeScreen()
+                    RecipeApp(navController = rememberNavController())
                 }
             }
         }
