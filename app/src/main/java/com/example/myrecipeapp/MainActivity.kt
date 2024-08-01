@@ -25,7 +25,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             MyRecipeAppTheme {
-                Surface(color = Color.White) {
+                Surface(color = Color.White, modifier = Modifier.fillMaxSize()) {
                     RecipeApp(navController = rememberNavController())
                 }
             }

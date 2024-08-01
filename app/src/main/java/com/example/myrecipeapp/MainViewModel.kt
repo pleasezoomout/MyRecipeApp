@@ -17,7 +17,6 @@ class MainViewModel : ViewModel() {
         fetchCategories()
     }
 
-
     private fun fetchCategories(){
         viewModelScope.launch {
             try {
@@ -28,7 +27,7 @@ class MainViewModel : ViewModel() {
                     error = null
                 )
 
-            }catch (e: Exception){
+            } catch (e: Exception){
                 _categorieState.value = _categorieState.value.copy(
                     loading = false,
                     error = "Error fetching Categories ${e.message}"
